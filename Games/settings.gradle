@@ -1,0 +1,21 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven {
+            url 'http://maven.djWjrn.wjWjrn/dadd-public'
+            allowInsecureProtocol true
+        }
+        gradlePluginPortal()
+    }
+}
+rootProject.name = "Games"
+include ':app'

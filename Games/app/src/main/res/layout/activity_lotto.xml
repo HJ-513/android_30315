@@ -6,4 +6,228 @@
     android:layout_height="match_parent"
     tools:context=".LottoActivity">
 
+    <ImageView
+        android:id="@+id/imageboy"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/boy" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="스크롤하여 선택"
+        app:layout_constraintBottom_toBottomOf="@id/imageboy"
+        app:layout_constraintTop_toTopOf="@+id/imageboy"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <LinearLayout
+        android:id="@+id/myBalls"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        app:layout_constraintTop_toBottomOf="@id/imageboy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/myNum1"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/ic_baseline_circle_yellow"
+            android:gravity="center"
+            android:text="1"
+            android:textSize="18sp"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/myNum2"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/ic_baseline_circle_red"
+            android:gravity="center"
+            android:text="1"
+            android:textSize="18sp"
+            android:visibility="gone" />
+        <TextView
+            android:id="@+id/myNum3"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/ic_baseline_circle_green"
+            android:gravity="center"
+            android:text="1"
+            android:textSize="18sp"
+            android:visibility="gone" />
+        <TextView
+            android:id="@+id/myNum4"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/ic_baseline_circle_blue"
+            android:gravity="center"
+            android:text="1"
+            android:textSize="18sp"
+            android:visibility="gone" />
+        <TextView
+            android:id="@+id/myNum5"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/ic_baseline_circle_gray"
+            android:gravity="center"
+            android:text="1"
+            android:textSize="18sp"
+            android:visibility="gone" />
+        <TextView
+            android:id="@+id/myNum6"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/ic_baseline_circle_purple"
+            android:gravity="center"
+            android:text="1"
+            android:textSize="18sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <NumberPicker
+        android:id="@+id/numberPicker"
+        android:layout_width="150dp"
+        android:layout_height="120dp"
+        app:layout_constraintTop_toBottomOf="@id/myBalls"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="15dp" />
+    <ImageButton
+        android:id="@+id/addButton"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:src="@drawable/ic_baseline_add_24"
+        app:layout_constraintTop_toTopOf="@id/numberPicker"
+        app:layout_constraintBottom_toBottomOf="@id/numberPicker"
+        app:layout_constraintStart_toEndOf="@id/numberPicker"
+        android:layout_marginStart="30dp"/>
+    <ImageButton
+        android:id="@+id/clearButton"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:src="@drawable/ic_baseline_clear_24"
+        app:layout_constraintTop_toTopOf="@id/numberPicker"
+        app:layout_constraintBottom_toBottomOf="@id/numberPicker"
+        app:layout_constraintStart_toEndOf="@id/addButton"
+        android:layout_marginStart="20dp"/>
+
+    <Button
+        android:id="@+id/runButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="로또추첨"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+    <LinearLayout
+        android:id="@+id/lottoBalls"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        app:layout_constraintBottom_toTopOf="@id/runButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/lottoNum1"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/ic_baseline_circle_yellow"
+            android:gravity="center"
+            android:text="1"
+            android:textSize="18sp"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/lottoNum2"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/ic_baseline_circle_red"
+            android:gravity="center"
+            android:text="1"
+            android:textSize="18sp"
+            android:visibility="gone" />
+        <TextView
+            android:id="@+id/lottoNum3"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/ic_baseline_circle_green"
+            android:gravity="center"
+            android:text="1"
+            android:textSize="18sp"
+            android:visibility="gone" />
+        <TextView
+            android:id="@+id/lottoNum4"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/ic_baseline_circle_blue"
+            android:gravity="center"
+            android:text="1"
+            android:textSize="18sp"
+            android:visibility="gone" />
+        <TextView
+            android:id="@+id/lottoNum5"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/ic_baseline_circle_gray"
+            android:gravity="center"
+            android:text="1"
+            android:textSize="18sp"
+            android:visibility="gone" />
+        <TextView
+            android:id="@+id/lottoNum6"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/ic_baseline_circle_purple"
+            android:gravity="center"
+            android:text="1"
+            android:textSize="18sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageRobot"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/lottoBalls"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/robot"/>
+
+
+    <TextView
+        android:id="@+id/txtResult"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="6개의 숫자를 선택하세요"
+        android:textSize="32dp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numberPicker"
+        app:layout_constraintBottom_toTopOf="@id/imageRobot"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
